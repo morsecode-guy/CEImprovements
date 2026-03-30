@@ -1,7 +1,7 @@
 using HarmonyLib;
 using Il2CppCraftEditor;
 
-namespace CraftEditorWASD.Patches;
+namespace CEImprovements.Patches;
 
 // runs right after the game clamps zoom — we force our own value
 // and reposition the camera so the built-in clamp is fully bypassed

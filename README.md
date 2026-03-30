@@ -1,6 +1,6 @@
-# CraftEditorWASD
+# CEImprovements
 
-A [MelonLoader](https://melonwiki.xyz/) mod for **Flyout** that adds WASD camera controls to the Craft Editor.
+A [MelonLoader](https://melonwiki.xyz/) mod for **Flyout** that improves the Craft Editor with better camera controls.
 
 ## Features
 
@@ -20,7 +20,7 @@ A [MelonLoader](https://melonwiki.xyz/) mod for **Flyout** that adds WASD camera
    ```
    Or pass it directly: `dotnet build -c Release -p:GameDir="/path/to/Flyout"`
 3. Build with `dotnet build -c Release`
-4. Copy `bin/Release/net6.0/CraftEditorWASD.dll` to your Flyout `Mods/` folder
+4. Copy `bin/Release/net6.0/CEImprovements.dll` to your Flyout `Mods/` folder
 
 ## Controls
 
@@ -37,9 +37,9 @@ A [MelonLoader](https://melonwiki.xyz/) mod for **Flyout** that adds WASD camera
 ## Project Structure
 
 ```
-CraftEditorWASD/
+CEImprovements/
   src/
-    CraftEditorWASDMod.cs      Main mod entry point
+    CEImprovementsMod.cs       Main mod entry point
     FpsCameraController.cs     WASD movement and FPS mode
     ZoomController.cs          Smooth zoom with harmony override
     FovController.cs           FOV adjustment

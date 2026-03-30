@@ -2,14 +2,14 @@ using MelonLoader;
 using Il2CppCraftEditor;
 using UnityEngine.InputSystem;
 
-[assembly: MelonInfo(typeof(CraftEditorWASD.CraftEditorWASDMod), "CraftEditorWASD", "1.0.0", "Morse Code Guy")]
+[assembly: MelonInfo(typeof(CEImprovements.CEImprovementsMod), "CEImprovements", "1.0.0", "Morse Code Guy")]
 [assembly: MelonGame("Stonext Games", "Flyout")]
 
-namespace CraftEditorWASD;
+namespace CEImprovements;
 
 // adds wasd camera, fps look, smooth zoom, and fov control
 // to the craft editor :3
-public class CraftEditorWASDMod : MelonMod
+public class CEImprovementsMod : MelonMod
 {
     readonly FpsCameraController _fps = new();
     readonly ZoomController _zoom = new();

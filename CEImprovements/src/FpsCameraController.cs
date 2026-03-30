@@ -2,7 +2,7 @@ using Il2CppCraftEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace CraftEditorWASD;
+namespace CEImprovements;
 
 // wasd + shift+mouse fps camera — puts the pivot right on the camera
 // so the game's orbit becomes our free look

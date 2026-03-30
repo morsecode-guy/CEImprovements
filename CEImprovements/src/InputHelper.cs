@@ -1,7 +1,7 @@
 using Il2CppTMPro;
 using UnityEngine.EventSystems;
 
-namespace CraftEditorWASD;
+namespace CEImprovements;
 
 // checks if the user is typing in a text box so we dont eat their keystrokes
 internal static class InputHelper

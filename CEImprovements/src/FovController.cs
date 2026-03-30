@@ -2,7 +2,7 @@ using Il2CppCraftEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace CraftEditorWASD;
+namespace CEImprovements;
 
 // fov adjustment via numpad +/-, regular +/-, or ctrl+scroll
 internal class FovController

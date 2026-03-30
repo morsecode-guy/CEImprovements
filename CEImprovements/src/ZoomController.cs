@@ -1,9 +1,9 @@
-using CraftEditorWASD.Patches;
+using CEImprovements.Patches;
 using Il2CppCraftEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace CraftEditorWASD;
+namespace CEImprovements;
 
 // smooth zoom that bypasses the game's built-in clamp (~25) via harmony patch
 // we read scroll input ourselves and smoothdamp to the target
