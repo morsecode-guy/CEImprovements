@@ -5,6 +5,7 @@ namespace CEImprovements.Patches;
 
 // runs right after the game clamps zoom — we force our own value
 // and reposition the camera so the built-in clamp is fully bypassed
+// skips when mod is disabled or CSE is open
 [HarmonyPatch(typeof(CECamera), "LateUpdate")]
 public static class CECameraZoomPatch
 {
@@ -13,6 +14,8 @@ public static class CECameraZoomPatch
 
     static void Postfix(CECamera __instance)
     {
+        if (!CEImprovementsMod.ModEnabled) return;
+
         if (OverrideZoom > 0f)
         {
             __instance.zoom = OverrideZoom;

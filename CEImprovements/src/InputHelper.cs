@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 namespace CEImprovements;
 
-// checks if the user is typing in a text box so we dont eat their keystrokes
 internal static class InputHelper
 {
     internal static bool IsInputFieldFocused()
@@ -17,5 +16,14 @@ internal static class InputHelper
             return false;
 
         return selected.GetComponent<TMP_InputField>() != null;
+    }
+
+    internal static bool IsCrossSectionEditorOpen() => Patches.CSEOpenPatch.IsOpen;
+
+    // true when the mouse pointer is over any UI element (panels, buttons, etc)
+    internal static bool IsPointerOverUI()
+    {
+        var eventSystem = EventSystem.current;
+        return eventSystem != null && eventSystem.IsPointerOverGameObject();
     }
 }

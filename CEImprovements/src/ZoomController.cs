@@ -35,9 +35,9 @@ internal class ZoomController
             _targetZoom = cam.zoom;
         }
 
-        // read scroll directly, skip if ctrl is held (thats fov)
+        // read scroll directly, skip if ctrl is held (thats fov) or cursor is over UI
         var mouse = Mouse.current;
-        if (mouse != null && !kb.ctrlKey.isPressed)
+        if (mouse != null && !kb.ctrlKey.isPressed && !InputHelper.IsPointerOverUI())
         {
             float scrollY = mouse.scroll.ReadValue().y;
             if (Mathf.Abs(scrollY) > 0.1f)
