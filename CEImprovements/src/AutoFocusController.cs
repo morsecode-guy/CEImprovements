@@ -19,10 +19,11 @@ internal class AutoFocusController
         var mgr = CEManager.instance;
         if (mgr == null) return;
 
-        var picked = mgr.pickedPart;
-        if (picked == null) return;
+        // Target is the currently selected/highlighted part
+        var part = mgr.Target;
+        if (part == null) return;
 
-        var targetPos = picked.transform.position;
+        var targetPos = part.transform.position;
         cam.pivot = Vector3.Lerp(cam.pivot, targetPos, Time.deltaTime * LerpSpeed);
     }
 }
