@@ -63,7 +63,7 @@ public class CEImprovementsMod : MelonMod
         if (cam == null) return;
 
         // push the far clip plane way out so distant geometry stays visible
-        cam.camera.farClipPlane = 100000f;
+        cam.camera.farClipPlane = float.MaxValue;
 
         var kb = Keyboard.current;
         if (kb == null) return;
