@@ -3,7 +3,7 @@ using Il2CppCraftEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[assembly: MelonInfo(typeof(CEImprovements.CEImprovementsMod), "CEImprovements", "1.1.0", "Morse Code Guy")]
+[assembly: MelonInfo(typeof(CEImprovements.CEImprovementsMod), "CEImprovements", "1.2.0", "Morse Code Guy")]
 [assembly: MelonGame("Stonext Games", "Flyout")]
 
 namespace CEImprovements;
@@ -61,6 +61,9 @@ public class CEImprovementsMod : MelonMod
         if (CEManager.instance == null) return;
         var cam = CEManager.instance.camera;
         if (cam == null) return;
+
+        // push the far clip plane way out so distant geometry stays visible
+        cam.camera.farClipPlane = 100000f;
 
         var kb = Keyboard.current;
         if (kb == null) return;
