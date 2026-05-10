@@ -15,6 +15,7 @@ public class CEImprovementsMod : MelonMod
     readonly FovController _fov = new();
     readonly AutoFocusController _autoFocus = new();
     readonly RotationClamper _rotClamp = new();
+    readonly EnginePreviewTwrController _enginePreviewTwr = new();
 
     internal static bool ModEnabled = true;
 
@@ -61,6 +62,9 @@ public class CEImprovementsMod : MelonMod
         if (CEManager.instance == null) return;
         var cam = CEManager.instance.camera;
         if (cam == null) return;
+
+        // extends turbine preview TWR with craft-level comparisons
+        _enginePreviewTwr.Update();
 
         // push the far clip plane way out so distant geometry stays visible
         cam.camera.farClipPlane = float.MaxValue;
